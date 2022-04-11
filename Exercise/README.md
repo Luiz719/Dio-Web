@@ -3,4 +3,4 @@
 ## Listas de Exercícios
 
 -[Exercício 2](exercise2.html)
--[Exercício 2](exercise3.html)
+-[Exercício 3](exercise3.html)
