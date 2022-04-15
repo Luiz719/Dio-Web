@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuário</title>
+</head>
+    <form action="">
+        <table>
+            <tr>
+                <th>
+                    Formulário de Cadastro
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <label for="nome">Nome </label>
+                </td>
+                <td>
+                    <input type="text" id="nome" required="true">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="sbnome">Sobrenome </label>
+                </td>
+                <td>
+                    <input type="text" id="sbnome" required="true">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="end"> Endereço </label>
+                </td>
+                <td>
+                    <textarea name="end" id="end" cols="30" rows="10" required="true"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="disc"> Disciplinas </label>
+                </td>
+                <td>
+                   <input type="checkbox" name="disc1" id="disc1" checked="true">
+                   <label for="disc1">Programação</label><br>
+                   <input type="checkbox" name="disc2" id="disc2">
+                   <label for="disc2">Lógica</label><br>
+                   <input type="checkbox" name="disc3" id="disc3">
+                   <label for="disc3">Algoritmos</label><br>
+                   <input type="checkbox" name="disc4" id="disc4">
+                   <label for="disc4">Banco de Dados</label><br>
+                   <input type="checkbox" name="disc5" id="disc5">
+                   <label for="disc5">Mobile</label><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="end"> Genero </label>
+                </td>
+                <td>
+                    <input type="radio" name="g1" id="g1" checked="true">
+                    <label for="g1">Masculino</label>
+                    <input type="radio" name="g2" id="g2">
+                    <label for="g2">Feminino</label>
+                    <input type="radio" name="g3" id="g3">
+                    <label for="g3">Não Informar</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="age">Idade </label>
+                </td>
+                <td>
+                    <select name="age" id="age" required="true">
+                        <option>
+                            Select
+                        </option>
+                        <option>
+                            Criança
+                        </option>
+                        <option>
+                            Adulto
+                        </option>
+                        <option>
+                            Idoso
+                        </option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="foto">Foto de Perfil </label>
+                </td>
+                <td>
+                    <input type="file" id="foto" required="true">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button">Cadastrar</button>
+                    <button type="reset">Limpar</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+<body>
+    
+</body>
+</html>
