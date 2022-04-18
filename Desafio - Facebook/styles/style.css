@@ -50,7 +50,7 @@ form{
     display: flex;
     padding: 20px;
     margin-bottom: 25px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 form input{
     width: 100%;
@@ -58,6 +58,11 @@ form input{
     border-radius: 5px;
     margin-bottom: 10px;
     border: 1px solid #999;
+    outline: none;
+    font-size: 16px;
+}
+form input:focus{
+    border: 1px solid #1877f2;
 }
 .right__logbtn{
     background-color: #1877f2;
@@ -68,14 +73,14 @@ form input{
     border-radius: 5px;
     color: white;
     font-family: 'Arial';
-    font-weight: 700px;
+    font-weight: 700;
     transition: 0.5s;
 }
 .right__logbtn:hover{
     background-color: #4257b2;
 }
 .right__forget{
-    margin: 15px;
+    margin: 15px 0;
     text-decoration: none;
     color: #1877f2;
     font-family: 'Arial';
@@ -106,4 +111,55 @@ form input{
 .right p{
     font-size: 15px;
     font-family: 'Arial';
+}
+@media(max-width: 950px){
+    .container{
+        flex-direction: column;
+    }
+    .left{
+        width: 400px;
+        align-content: center;
+        align-items: center;
+    }
+    left p{
+        height: 75px;
+        font-size: 20px;
+    }
+}
+@media(max-width: 500px){
+    .right{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    form{
+        width: 350px;
+        align-items: center;
+        align-content: center;
+    }
+}
+@media(max-width: 300px){
+    .right{
+        display: flex;
+        justify-content: center;
+    }
+    .left{
+        display: flex;
+        justify-content: center;
+    }
+    .left img{
+        height: 95px;
+    }
+    form{
+        width: 250px;
+        align-items: center;
+        align-content: center;
+    }
+    .left p, .right p{
+        display: none
+    }
+    form input, .right__forget, .right__logbtn, .right__signupbtn{
+        font-size: 12px;
+    }
 }
