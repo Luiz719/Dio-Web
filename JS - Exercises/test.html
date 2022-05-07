@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class='teste' name="principal">Minha página</p>
+    <p class="teste">Teste DOM</p>
+    <div class="teste" id="div_id" name="teste_nome">
+        <input type="text" name="nome" id="nome">
+        <input type="button" value="Teste" id="btn_id" class="teste_btn" onclick="obterDado()">
+    </div>
+</body>
+<script>
+    function obterDado() {
+        console.log("botão clicado")
+        var dado = document.getElementById("nome").value
+        console.log(dado)
+    }
+    var elemento = document.getElementById('div_id')
+    var elementos = document.getElementsByClassName("test")
+    var elementos2 = document.getElementsByTagName("p")
+    console.log(elementos2)
+    var elemento3 = document.querySelector("#div_id")
+    console.log(elemento3)
+    var elementos3 = document.querySelectorAll("#teste")
+    console.log(elementos3)
+</script>
+</html>
