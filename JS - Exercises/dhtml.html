@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+        <button id="btn">Click me</button>
+    </div>
+<body>
+<script>
+    var btn  = document.getElementById("btn").addEventListener("click",function(){
+    //criando um novo elemento "p"
+    var newText = document.createElement("p");
+    //inserindo texto no elemento p
+    newText.innerHTML = "Olá"
+    //obtendo a div onde o elemento será inserido
+    var currentDiv = document.getElementById("main");
+    //inserindo o novo elemento dentro da div
+    document.body.appendChild(newText, currentDiv);
+    })
+</script>
+</html>
