@@ -7,7 +7,7 @@ class HelloClass extends React.Component {
     render(){
         return (
             <div>
-                <p>Olá, classe! tudo beleza?</p>
+                <p>Olá, {this.props.name}! tudo beleza?</p>
             </div>
         )
     }
