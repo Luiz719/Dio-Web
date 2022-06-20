@@ -10,7 +10,6 @@ class PersonClass extends React.Component {
             name: this.props.name,
             status: true
         }
-        this.status = this.props.status
         this.uS = this.updateStatus.bind(this)
     }
     updateStatus(){
