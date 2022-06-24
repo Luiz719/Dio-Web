@@ -12,7 +12,7 @@ const AddUserForm = (props) => {
         <form on Submit={
             (event) =>{
                 event.preventDefault()
-                if(!user.name || !user.email || !user.age || !user.username)
+                if(!user.name || !user.username|| !user.email || !user.age)
                     return
                 props.addUser(user)
                 setUser(initForm)
