@@ -1,4 +1,12 @@
 import React, {useState, useEffect} from 'react';
+import styled from 'styled-components';
+
+const ConfirmButton = styled.button`
+    background-color: lightgreen
+`
+const CancelButton = styled.button`
+    background-color: lightcoral
+`
 
 const EditUserForm = (props) => {
     const [user, setUser] = useState(props.currentUser)
@@ -9,10 +17,10 @@ const EditUserForm = (props) => {
     )
     const handleInputChange = (event) => {
         const {name, value} = event.target
-        setUser({...user, [name]: value})
+        setUser({...user, [name]:value})
     }
     return(
-        <form on Submit={
+        <form onSubmit={
             (event) =>{
                 event.preventDefault()
                 props.updateUser(user.id, user)
@@ -22,10 +30,10 @@ const EditUserForm = (props) => {
             <input type="text" name="username" value= {user.username} onChange= {handleInputChange} placeholder="Nickname"/>
             <input type="email" name="email" value= {user.email} onChange= {handleInputChange} placeholder="Email"/>
             <input type="number" name="age" value= {user.age} onChange= {handleInputChange} placeholder="Idade"/>
-            <button>Atualizar</button>
-            <button onClick={
+            <ConfirmButton>Atualizar</ConfirmButton>
+            <CancelButton onClick={
                 ()=> props.setEditing(false)
-            }>Cancelar</button>
+            }>Cancelar</CancelButton>
         </form>
     )
 }
