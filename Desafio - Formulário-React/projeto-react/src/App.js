@@ -1,12 +1,13 @@
-import Users from './components/Users';
-import styles from './components/styles.modules.css';
+import React from 'react';
+import Home from './components/Home'
+import styles from './components/styles.modules.css'
 
 function App() {
   return (
-    <div className="App">
-      <Users />
-    </div>
-  );
+		<div className="main">
+			<Home />
+		</div>
+	)
 }
 
 export default App;
