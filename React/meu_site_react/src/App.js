@@ -1,12 +1,8 @@
 import './App.css';
-import React from 'react'
-import './components/HelloReact'
-import HelloReact from './components/HelloReact';
-import HelloDev from './components/HelloDev';
-import HelloClass from './components/HelloClass';
+import React from 'react';
+import './components/HelloReact';
 import HelloPeople from './components/HelloPeople';
 import HelloCalc from './components/HelloCalc';
-import Car from './components/Car';
 import PersonClass from './components/PersonClass';
 import StateColor from './components/StateColor';
 import StateCar from './components/StateCar';
@@ -14,17 +10,18 @@ import StatePerson from './components/StatePerson';
 import StateClock from './components/StateClock';
 import FormExample from './components/FormExample';
 import FormMultiple from './components/FormMultiple';
+import UseEffectClass from './components/UseEffectClass'
+import UseEffectFunction from './components/UseEffectFunction';
+import UseContext from './components/UseContext'
+import UseRef from './components/UseRef';
+
 
 function App() {
   return (
     <div>
     <div className="App">
-      <HelloReact />
-      <HelloClass name ="Classe A"/>
-      <HelloDev dev_name="Luiz"/>
       <HelloPeople name="Gonzaga" age ="12"/>
       <HelloCalc />
-      <Car/>
       <PersonClass name="Luiz"/>
     </div>
      <div className="App">
@@ -35,6 +32,12 @@ function App() {
      </div>
      <FormExample/>
      <FormMultiple/>
+     <div className="App">
+      <UseEffectClass />
+      <UseEffectFunction />
+      <UseContext />
+      <UseRef />
+    </div>
    </div>
   );
 }
