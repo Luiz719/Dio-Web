@@ -14,7 +14,9 @@ import UseEffectClass from './components/UseEffectClass'
 import UseEffectFunction from './components/UseEffectFunction';
 import UseContext from './components/UseContext'
 import UseRef from './components/UseRef';
-
+import LazyFunction from './components/LazyFunction';
+import SetStateFunctionPrev from './components/SetStateFunctionPrev';
+import PrevState from './components/PrevState';
 
 function App() {
   return (
@@ -37,6 +39,11 @@ function App() {
       <UseEffectFunction />
       <UseContext />
       <UseRef />
+    </div>
+    <div className="App">
+      <LazyFunction/>
+      <PrevState/>
+      <SetStateFunctionPrev/>
     </div>
    </div>
   );
