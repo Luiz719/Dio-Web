@@ -17,6 +17,10 @@ import UseRef from './components/UseRef';
 import LazyFunction from './components/LazyFunction';
 import SetStateFunctionPrev from './components/SetStateFunctionPrev';
 import PrevState from './components/PrevState';
+import FetchAPIData from './components/api/FetchAPIData';
+import TodoList from './components/itemsList/TodoList'
+import TodoListCallback from './components/itemsList/TodoListCallback'
+import CallbackMemo from './components/CallbackMemo';
 
 function App() {
   return (
@@ -44,6 +48,12 @@ function App() {
       <LazyFunction/>
       <PrevState/>
       <SetStateFunctionPrev/>
+    </div>
+    <div className="App">
+      <FetchAPIData />
+      <TodoList />
+      <TodoListCallback />
+      <CallbackMemo />
     </div>
    </div>
   );
