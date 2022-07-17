@@ -24,7 +24,7 @@ const Home = () => {
         border: "1px solid cadetblue",
         color:"dimgray"
     }
-    const tiles = [
+   const tiles = [
         {id: 1, icon: btc, name: 'BTC', rate: 135000},
         {id: 2, icon: eth, name: 'ETH', rate: 7500},
         {id: 3, icon: ltc, name: 'LTC', rate: 250},

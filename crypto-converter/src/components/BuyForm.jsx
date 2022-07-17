@@ -14,14 +14,14 @@ const InputButton = styled.input`
     background-color: cadetblue;
 `
 const BuyForm = ({data, onPurchase}) => {
-    const {name, rate} = data // name = props.data.name | rate = props.data.rate
+    const {name, price} = data // name = props.data.name | price = props.data.price
     const initForm = {amount: 0, converted: 0}
     const [exchange, setExchange] = useState(initForm)
     const [transactions, setTransactions] = useState([])
     useEffect(() => {
         setExchange({
             ...exchange,
-            converted: Number(exchange.amount / rate).toFixed(8)
+            converted: Number(exchange.amount / price).toFixed(8)
         })
     },[name])
     useEffect(() =>{
@@ -31,11 +31,11 @@ const BuyForm = ({data, onPurchase}) => {
     const handleChange = ({target: {value, name}}) => {
         //event.target.value
         const val = Number(value.trim())
-        const converted = (val/rate).toFixed(8)
+        const converted = (val/price).toFixed(8)
         setExchange(
             {
                 [name]:value,
-                rate:rate,
+                price:price,
                 converted:converted
             }
         )
@@ -45,15 +45,16 @@ const BuyForm = ({data, onPurchase}) => {
             event.preventDefault()
             if(!exchange.amount){
                 alert("Informe um valor válido!")
+            }else if(exchange.amount != 0){
+                const payload = {
+                    ...exchange,
+                    name:name,
+                    id:generateId("txid_") //txid_8976463 txid_363456
+                }
+                setTransactions(
+                    [...transactions, payload]
+                )
             }
-            const payload = {
-                ...exchange,
-                name:name,
-                id:generateId("txid_") //txid_8976463 txid_363456
-            }
-            setTransactions(
-                [...transactions, payload]
-            )
         },[exchange, transactions]
     )
     return (
@@ -61,14 +62,13 @@ const BuyForm = ({data, onPurchase}) => {
             <div className="buy-form-container">
                 <h4>Comprar {name}</h4>
                 {/* entrada de dados do valor em reais */}
-                <InputBase name="amount" label="BRL" onChange={handleChange}  className="brl-input"/>
+                <InputBase name="amount" label="USD" onChange={handleChange}  className="brl-input"/>
                 {/* resultado da conversão do valor em reais pela taxa de câmbio da criptomoeda */}
                 <InputBase 
                     value={exchange.converted} disabled label={name}
                 />
                 <InputButton type="submit" value="Comprar" />
             </div>
-
         </form>
     )
 }

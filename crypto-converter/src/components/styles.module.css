@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    width: 450px;
     border-radius: 5px;
     border: 1px solid cadetblue;
     margin-bottom: 5%;
@@ -9,10 +11,9 @@
 
 .transactionLine{
     display: flex;
-    padding: 5px;
-    margin-bottom: 5px;
-    width:75%;
     justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
 }
 
 .button-input{

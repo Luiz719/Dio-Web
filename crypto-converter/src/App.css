@@ -1,18 +1,19 @@
-body{
+/*body{
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: darkseagreen;
 }
-
 .card{
   text-align: center;
+  justify-content: center;
+  align-items: center;
   width: 60px;
   cursor: pointer;
   margin: 0 20px;
   padding: 10px;
   border-radius: 5px;
-}
+}*/
 
 .card.selected {
   border: 1px solid cadetblue;
@@ -20,19 +21,21 @@ body{
   border-radius: 5px
 }
 
-.coin-icon{
+/*.coin-icon{
   max-width: 45px;
   max-height: 55px;
   padding-top: 10px;
-}
+}*/
 
 .buy-form-container{
   display: flex;
   flex-direction: column;
   padding-top: 5%;
   align-items: center;
+  justify-content: center;
   padding-bottom: 5%;
   border-radius: 5px;
+  width: 100%;
   border: 1px solid cadetblue;
   margin-top: 5%;
   margin-bottom: 5%;
@@ -53,10 +56,59 @@ body{
 
 .transaction-name, .transaction-value, .empty-list-title{
   color: slategrey;
-  padding-left: 10%;
+  padding: 5%;
 }
 
 h4, h5{
   color: slategrey;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilização API*/
+
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(182, 222, 182, 0.996);
+  font-family: Arial, Helvetica, sans-serif;
+  color:aliceblue
+}
+
+.coin-icon{
+  max-width: 35px;
+  max-height: 45px;
+  padding-top: 10px;
+}
+
+.card{
+  text-align: center;
+  width: 200px;
+  margin: 20px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: cadetblue;
+}
+
+.card:hover{
+  background-color:rgb(110, 171, 173);
+}
+
+input{
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+  border-radius: 5px;
+  color: dimgray;
+  text-align: center;
+  border: transparent;
+}
+
+input:focus{
+  outline: none;
 }
