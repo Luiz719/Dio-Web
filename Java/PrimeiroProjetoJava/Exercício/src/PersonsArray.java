@@ -22,7 +22,6 @@ class Person{
 
 public class PersonsArray {
     public static void main(String[] args) {
-
         //array de objetos da classe pessoa
         Person persons[] = new Person[3];
         persons[0] = new Person("Cassiano", 32);
