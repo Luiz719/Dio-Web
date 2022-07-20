@@ -1,5 +1,6 @@
 package lambdas;
 
+
 interface Hello{
     //função abstrata
     void abstractFunction(int i);
