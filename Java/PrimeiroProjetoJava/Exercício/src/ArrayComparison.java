@@ -9,6 +9,5 @@ public class ArrayComparison {
         } else {
             System.out.println("Diferentes");
         }
-
     }
 }
