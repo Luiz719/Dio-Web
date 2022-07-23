@@ -3,10 +3,7 @@ package products;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
-
 
 public class ProductStream {
     //Lista de objetos da classe Product
@@ -31,7 +28,7 @@ public class ProductStream {
         //Filtrando produtos com base no preço menor que 750.00
         List<Product> pList = productsList.stream()
         .filter(product -> product.getPrice() < 750.00)
-        .map(product -> product).toList();
+        .toList();
         //Lista de produtos
         pList.forEach(product -> System.out.println(product.getId() + " " + product.getName() + " " + product.getPrice()));
         System.out.println();
