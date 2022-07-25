@@ -1,3 +1,5 @@
+package interfaces;
+
 interface AnimalActions{
     //Métodos abstratos - sem corpo
     public void emitSound(String sound);
