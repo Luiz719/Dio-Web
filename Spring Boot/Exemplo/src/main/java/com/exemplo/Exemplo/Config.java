@@ -4,7 +4,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan(basePackages = {"com.aula104.exemplo"})
+@ComponentScan(basePackages = {"com.exemplo.Exemplo"})
 public class Config {
     
 }
