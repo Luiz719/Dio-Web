@@ -2,12 +2,12 @@ package com.project.viacepapiclient;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
-public class ViacepApiClientApplication {
-
+@EnableFeignClients
+public class ClientApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(ViacepApiClientApplication.class, args);
+		SpringApplication.run(ClientApplication.class, args);
 	}
-
 }
